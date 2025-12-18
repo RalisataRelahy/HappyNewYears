@@ -128,15 +128,15 @@
 <div class="ui">
   <div class="txt" id="text">Happy New Years!! 🎉🎊<br> <span>Babe ✨🎉</span></div>
   <p class="lettre">
-    Hey toi 💖
-On arrive à la fin d’une année qui, franchement, n’aurait jamais eu la même saveur sans toi🥺. Ça fait maintenant 1 an et 3 mois qu’on avance ensemble… 🥺et j’ai toujours ce petit truc dans le cœur quand je pense à nous🥺😍. Tu sais, ce mélange bizarre entre paix, bonheur, et un “wowwww😍🤩… comment j’ai fait pour avoir quelqu’un comme elle ?🥺”.
-Cette année, tu m’as appris à aimer, à sourire plus vrai🥺, et à croire en un futur qui fait moins peur et plus envie🥺.
-T’as été là dans les moments les plus cools jusqu'au moments les plus compliqués, les moments où je comprenais rien et même là où moi-même je savais pas où j’allais. Et ça… ça vaut plus que tout.
-Pour l’année qui arrive, j’ai juste un souhait 🥺:Continuer à te choisir Pisou an🥺, tous les jours, à construire quelque chose de propre, solide, un peu fou parfois mais toujours nous.
-Merci pour ta patience, ta douceur, ton énergie, ta folie mignonne, tes câlins qui reset ma tête, et ta présence qui rend ma vie plus belle que je l’avoue🥺.
-Alors… Happy New Year, Babe ✨❤️
-Que 2026 nous garde ensemble🥺, encore plus proches🥺, encore plus réels que jamais piso ann🥺, encore plus complices🥺.
-Et prépare-toi : je compte bien t’aimer encore mieux que cette année😉❤🥺😍.
+      Hey toi 💖
+  On arrive à la fin d’une année qui, franchement, n’aurait jamais eu la même saveur sans toi🥺. Ça fait maintenant 1 an et 3 mois qu’on avance ensemble… 🥺et j’ai toujours ce petit truc dans le cœur quand je pense à nous🥺😍. Tu sais, ce mélange bizarre entre paix, bonheur, et un “wowwww😍🤩… comment j’ai fait pour avoir quelqu’un comme elle ?🥺”.
+  Cette année, tu m’as appris à aimer, à sourire plus vrai🥺, et à croire en un futur qui fait moins peur et plus envie🥺.
+  T’as été là dans les moments les plus cools jusqu'au moments les plus compliqués, les moments où je comprenais rien et même là où moi-même je savais pas où j’allais. Et ça… ça vaut plus que tout.
+  Pour l’année qui arrive, j’ai juste un souhait 🥺:Continuer à te choisir Pisou an🥺, tous les jours, à construire quelque chose de propre, solide, un peu fou parfois mais toujours nous.
+  Merci pour ta patience, ta douceur, ton énergie, ta folie mignonne, tes câlins qui reset ma tête, et ta présence qui rend ma vie plus belle que je l’avoue🥺.
+  Alors… Happy New Year, Babe ✨❤️
+  Que 2026 nous garde ensemble🥺, encore plus proches🥺, encore plus réels que jamais piso ann🥺, encore plus complices🥺.
+  Et prépare-toi : je compte bien t’aimer encore mieux que cette année😉❤🥺😍.
   </p>
 </div>
 
@@ -374,5 +374,25 @@ ctx.fillStyle = '#060610';
 ctx.fillRect(0,0,W,H);
 
 </script>
+<script>
+  const today = new Date();
+  const allowedDate = new Date(2026, 0, 1); // 0 = janvier, 1er janvier 2026
+
+  if (
+    today.getDate() !== allowedDate.getDate() ||
+    today.getMonth() !== allowedDate.getMonth() ||
+    today.getFullYear() !== allowedDate.getFullYear()
+  ) {
+    // Bloquer tout le site
+    document.body.innerHTML = `
+      <div style="display:flex;align-items:center;justify-content:center;height:100vh;background:#060610;color:white;font-family:sans-serif;text-align:center;">
+        <h1>Tsy androany aki ann.<br>MBA miandrasa wa ndry tantana malala ann🥰😏!</h1>
+      </div>
+    `;
+  }else{
+    console.log("oke")
+  }
+</script>
+
 </body>
 </html>
