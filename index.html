@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Feu d'artifice - Happy Birthday</title>
+<title>Happy New Years Karenn!!❤</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
 <style>
    /* reset minimal */
@@ -377,16 +377,28 @@ ctx.fillRect(0,0,W,H);
 <script>
   const today = new Date();
   const allowedDate = new Date(2026, 0, 1); // 0 = janvier, 1er janvier 2026
-
+  const dateFixe=new Date("2026-01-01T00:00:00")
   if (
     today.getDate() !== allowedDate.getDate() ||
     today.getMonth() !== allowedDate.getMonth() ||
     today.getFullYear() !== allowedDate.getFullYear()
   ) {
+    const maintenant = new Date();
+    const diffMs = maintenant - dateFixe; // différence en millisecondes
+    const secondes = Math.floor(diffMs / 1000);
+    const minutes = Math.floor(secondes / 60);
+    const heures = Math.floor(minutes / 60);
+    const jours = -1*(Math.floor(heures / 24));
+
+    const resteHeures = -1*heures % 24;
+    const resteMinutes =-1* minutes % 60;
+    const resteSecondes = -1*secondes % 60;
+
     // Bloquer tout le site
     document.body.innerHTML = `
       <div style="display:flex;align-items:center;justify-content:center;height:100vh;background:#060610;color:white;font-family:sans-serif;text-align:center;">
         <h1>Tsy androany aki ann.<br>MBA miandrasa wa ndry tantana malala ann🥰😏!</h1>
+        <h3> Reste plus que: ${jours} jours, ${resteHeures}h ${resteMinutes}min ${resteSecondes}s😏</h3>
       </div>
     `;
   }else{
